@@ -1,0 +1,8 @@
+.DS_Store
+DerivedData/
+build/
+.build/
+xcuserdata/
+*.xcworkspace/xcuserdata/
+Config/LocalSecrets.xcconfig
+
