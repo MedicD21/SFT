@@ -18,5 +18,26 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSCameraUsageDescription</key>
+	<string>SFT uses the camera to scan barcodes and analyze food photos for nutrition estimates.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>SFT reads Health data to avoid duplicate entries.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>SFT writes your food nutrition data to Apple Health so it stays in sync with your other health metrics.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>SFT accesses your photo library so you can select a food photo for nutrition analysis.</string>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
 </dict>
 </plist>

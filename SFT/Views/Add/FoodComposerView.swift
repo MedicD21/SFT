@@ -7,14 +7,16 @@ struct FoodComposerView: View {
     @Environment(\.modelContext) private var modelContext
 
     let onSaved: () -> Void
+    let editingEntry: FoodLogEntry?
 
     @State private var draft: FoodDraft
     @State private var syncToHealthKit = true
     @State private var isSaving = false
     @State private var errorMessage: String?
 
-    init(draft: FoodDraft, onSaved: @escaping () -> Void) {
+    init(draft: FoodDraft, editingEntry: FoodLogEntry? = nil, onSaved: @escaping () -> Void) {
         self.onSaved = onSaved
+        self.editingEntry = editingEntry
         _draft = State(initialValue: draft)
     }
 
@@ -119,7 +121,7 @@ struct FoodComposerView: View {
                 .padding(20)
             }
             .background(AppTheme.pageGradient.ignoresSafeArea())
-            .navigationTitle("Compose")
+            .navigationTitle(editingEntry != nil ? "Edit Entry" : "Compose")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -169,26 +171,44 @@ struct FoodComposerView: View {
         draft.servingDescription = draft.servingDescription.trimmingCharacters(in: .whitespacesAndNewlines)
         draft.notes = draft.notes.trimmingCharacters(in: .whitespacesAndNewlines)
 
-        let entry = FoodLogEntry(draft: draft)
-        modelContext.insert(entry)
-
-        do {
-            try modelContext.save()
-        } catch {
-            errorMessage = "Local save failed: \(error.localizedDescription)"
-            isSaving = false
-            return
-        }
-
-        if syncToHealthKit {
+        if let existing = editingEntry {
+            existing.name = draft.name
+            existing.brand = draft.brand
+            existing.servingDescription = draft.servingDescription
+            existing.servings = draft.servings
+            existing.consumedAt = draft.consumedAt
+            existing.meal = draft.meal
+            existing.notes = draft.notes
+            existing.nutrition = draft.nutrition
             do {
-                try await services.healthKit.requestAuthorization()
-                try await services.healthKit.save(draft)
-                entry.healthKitSyncedAt = .now
-                try? modelContext.save()
+                try modelContext.save()
             } catch {
-                entry.healthKitSyncedAt = nil
-                try? modelContext.save()
+                errorMessage = "Save failed: \(error.localizedDescription)"
+                isSaving = false
+                return
+            }
+        } else {
+            let entry = FoodLogEntry(draft: draft)
+            modelContext.insert(entry)
+
+            do {
+                try modelContext.save()
+            } catch {
+                errorMessage = "Local save failed: \(error.localizedDescription)"
+                isSaving = false
+                return
+            }
+
+            if syncToHealthKit {
+                do {
+                    try await services.healthKit.requestAuthorization()
+                    try await services.healthKit.save(draft)
+                    entry.healthKitSyncedAt = .now
+                    try? modelContext.save()
+                } catch {
+                    entry.healthKitSyncedAt = nil
+                    try? modelContext.save()
+                }
             }
         }
 

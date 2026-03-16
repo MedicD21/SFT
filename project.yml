@@ -2,7 +2,7 @@ name: SFT
 options:
   createIntermediateGroups: true
   deploymentTarget:
-    iOS: "17.0"
+    iOS: "26.0"
 configs:
   Debug: debug
   Release: release
@@ -28,6 +28,19 @@ targets:
           - SFT.entitlements
     info:
       path: SFT/Info.plist
+      properties:
+        UILaunchScreen: {}
+        NSHealthUpdateUsageDescription: "SFT writes your food nutrition data to Apple Health so it stays in sync with your other health metrics."
+        NSHealthShareUsageDescription: "SFT reads Health data to avoid duplicate entries."
+        NSCameraUsageDescription: "SFT uses the camera to scan barcodes and analyze food photos for nutrition estimates."
+        NSPhotoLibraryUsageDescription: "SFT accesses your photo library so you can select a food photo for nutrition analysis."
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+          - UIInterfaceOrientationPortraitUpsideDown
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
     entitlements:
       path: SFT/SFT.entitlements
     settings:

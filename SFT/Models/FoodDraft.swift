@@ -53,6 +53,23 @@ struct FoodDraft: Identifiable, Hashable, Sendable {
         servings = safeNew
     }
 
+    static func fromEntry(_ entry: FoodLogEntry) -> FoodDraft {
+        FoodDraft(
+            id: entry.id,
+            name: entry.name,
+            brand: entry.brand,
+            servingDescription: entry.servingDescription,
+            servings: entry.servings,
+            consumedAt: entry.consumedAt,
+            meal: entry.meal,
+            source: entry.source,
+            notes: entry.notes,
+            barcode: entry.barcode,
+            usdaFDCID: entry.usdaFDCID,
+            nutrition: entry.nutrition
+        )
+    }
+
     static func fromUSDA(_ item: FoodSearchItem, source: FoodSourceKind, now: Date = .now) -> FoodDraft {
         FoodDraft(
             name: item.title,

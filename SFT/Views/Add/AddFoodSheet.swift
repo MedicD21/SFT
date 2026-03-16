@@ -39,6 +39,7 @@ struct AddFoodSheet: View {
                 }
                 .padding(20)
             }
+            .scrollDismissesKeyboard(.interactively)
             .background(AppTheme.pageGradient.ignoresSafeArea())
             .navigationTitle("Add Food")
             .navigationBarTitleDisplayMode(.inline)
@@ -48,7 +49,10 @@ struct AddFoodSheet: View {
                         .foregroundStyle(AppTheme.mist)
                 }
             }
+            .toolbarBackground(AppTheme.background, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
         }
+        .background(AppTheme.background.ignoresSafeArea())
         .sheet(item: $draftToCompose) { draft in
             FoodComposerView(draft: draft) {
                 dismiss()

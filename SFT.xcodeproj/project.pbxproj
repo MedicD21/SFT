@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,12 +29,14 @@
 		A99F36E5CEDC172571DCD28B /* FoodDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4ABF935C63CC28EA619C7 /* FoodDraft.swift */; };
 		B251900C816BB0BF514BFCAB /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23811B9E2A7A921F77FACCE8 /* HealthKitService.swift */; };
 		B3FAA304F39CF04E5DFAC181 /* FoodPhotoAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A060C4D7239CF1E3F8D466D /* FoodPhotoAnalysisView.swift */; };
+		C11B8451CEFA33410302A64D /* DailyGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA57742D8F088EBBE5751D5 /* DailyGoals.swift */; };
 		C6690019943CE88B78B554B3 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99FB560940D8A4454076816 /* AppServices.swift */; };
 		CC9B8B3BB225C653A40CBD0B /* OpenRouterPhotoAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C315D35FC3EC77C744ECD42E /* OpenRouterPhotoAnalyzer.swift */; };
 		CD28F58BD2150FDA469BED56 /* USDAFoodDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBC4E87CC2E1589BBBCCF0 /* USDAFoodDataClient.swift */; };
 		DD883859195870FC42C50282 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983D1BA5D4E405EAE6C82E91 /* AppConfig.swift */; };
 		E7FF6BB667BA0863B4446264 /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFC46B8702D2E53932E2311 /* CameraCaptureView.swift */; };
 		F1E7154EEB70E5E0C315E539 /* FoodSourceKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD79D2F4F0B5439A3B37BFE /* FoodSourceKind.swift */; };
+		F4D21B098E13E31D76025EFC /* GoalsEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F4DED2423666D4D96EC65 /* GoalsEditorView.swift */; };
 		F5841704631B4A31D122A8FF /* NutritionFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6D098A126348A3BB183D1 /* NutritionFactsTests.swift */; };
 		F9BBF4A30A8318C45B1C0F96 /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6D8699B4382D7CB79DFDB /* Date+Helpers.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,7 @@
 		5EB461B966D1BFB7F75E2473 /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
 		5EFC46B8702D2E53932E2311 /* CameraCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCaptureView.swift; sourceTree = "<group>"; };
 		65436D545017F924A9488D8A /* AddFoodMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodMode.swift; sourceTree = "<group>"; };
+		657F4DED2423666D4D96EC65 /* GoalsEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsEditorView.swift; sourceTree = "<group>"; };
 		75B74450605AE597B68C112D /* BarcodeLookupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeLookupView.swift; sourceTree = "<group>"; };
 		77D6D098A126348A3BB183D1 /* NutritionFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionFactsTests.swift; sourceTree = "<group>"; };
 		7A060C4D7239CF1E3F8D466D /* FoodPhotoAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPhotoAnalysisView.swift; sourceTree = "<group>"; };
@@ -73,13 +76,14 @@
 		8D4643960E84FB4260A7A4BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E535FA99E5E9F16CA8E2CA5 /* USDAFoodSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USDAFoodSearchView.swift; sourceTree = "<group>"; };
 		983D1BA5D4E405EAE6C82E91 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
-		98E43CDE08EB3B4DE610C1D3 /* SFT.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SFT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E43CDE08EB3B4DE610C1D3 /* SFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECE8D9B6EE07741E94EB839 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		AD13CEC754118F30E201918E /* StatChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatChip.swift; sourceTree = "<group>"; };
-		B89DC461AAFF7F6C75DD881B /* SFTTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SFTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B89DC461AAFF7F6C75DD881B /* SFTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C315D35FC3EC77C744ECD42E /* OpenRouterPhotoAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenRouterPhotoAnalyzer.swift; sourceTree = "<group>"; };
 		C3C8295DE6E9A28D53D11B42 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		C99FB560940D8A4454076816 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		CBA57742D8F088EBBE5751D5 /* DailyGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoals.swift; sourceTree = "<group>"; };
 		D9041AD63556C35C419E6105 /* AddFoodSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodSheet.swift; sourceTree = "<group>"; };
 		E862C7FE182152EFDA329112 /* FoodComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodComposerView.swift; sourceTree = "<group>"; };
 		EF665F4F132BC861ADE667A5 /* FoodSearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchItem.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				65436D545017F924A9488D8A /* AddFoodMode.swift */,
+				CBA57742D8F088EBBE5751D5 /* DailyGoals.swift */,
 				22B4ABF935C63CC28EA619C7 /* FoodDraft.swift */,
 				08BE0F9EE5A757F400226F4F /* FoodLogEntry.swift */,
 				EF665F4F132BC861ADE667A5 /* FoodSearchItem.swift */,
@@ -229,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				1C26DD4661C8E07BDEEDA41E /* DashboardView.swift */,
+				657F4DED2423666D4D96EC65 /* GoalsEditorView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -286,7 +292,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					403F1A9B138E90B162352CE5 = {
-						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -301,7 +306,6 @@
 			);
 			mainGroup = D481C16B0C9A990506ACFF64;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -335,6 +339,7 @@
 				72F2E8FF2E0FBF97B23B9C53 /* BarcodeLookupView.swift in Sources */,
 				17B60D001282573E4BA0EAEE /* BarcodeScannerView.swift in Sources */,
 				E7FF6BB667BA0863B4446264 /* CameraCaptureView.swift in Sources */,
+				C11B8451CEFA33410302A64D /* DailyGoals.swift in Sources */,
 				4545681C209150A13AA6B794 /* DashboardView.swift in Sources */,
 				F9BBF4A30A8318C45B1C0F96 /* Date+Helpers.swift in Sources */,
 				8B72B9DF862A9908A2AE88B5 /* FoodComposerView.swift in Sources */,
@@ -345,6 +350,7 @@
 				F1E7154EEB70E5E0C315E539 /* FoodSourceKind.swift in Sources */,
 				12867CDED77FC2577ED400D1 /* Formatting.swift in Sources */,
 				75C5F0857C940C8A59D4F4F8 /* GlassCard.swift in Sources */,
+				F4D21B098E13E31D76025EFC /* GoalsEditorView.swift in Sources */,
 				B251900C816BB0BF514BFCAB /* HealthKitService.swift in Sources */,
 				9540F3B1F2A35FBF99A48FFB /* MealSlot.swift in Sources */,
 				4D72A48981560C76F5C9A35B /* NutritionEditorView.swift in Sources */,
@@ -400,6 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SFT/SFT.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 286LKF859M;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = SFT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -419,6 +426,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SFT/SFT.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 286LKF859M;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = SFT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -17,6 +17,7 @@ struct SFTApp: App {
             DashboardView()
                 .environment(\.appServices, services)
                 .preferredColorScheme(.dark)
+                .background(AppTheme.background.ignoresSafeArea())
         }
         .modelContainer(modelContainer)
     }

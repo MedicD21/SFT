@@ -9,6 +9,7 @@ struct GlassCard<Content: View>: View {
 
     var body: some View {
         content
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(20)
             .background(AppTheme.cardGradient)
             .overlay(
@@ -18,6 +19,6 @@ struct GlassCard<Content: View>: View {
             .background(AppTheme.cardOverlay)
             .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
             .shadow(color: .black.opacity(0.22), radius: 24, x: 0, y: 14)
+            .frame(maxWidth: .infinity)
     }
 }
-

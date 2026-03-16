@@ -2,6 +2,8 @@
 
 SFT is a native iPhone food tracking app built in SwiftUI with one job: track food simply and beautifully.
 
+Minimum supported OS: iOS 26.0.
+
 It does not include weight tracking, coaching, exercise, water, or habit clutter. The app focuses on:
 
 - Manual food lookup and entry
